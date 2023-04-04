@@ -1,0 +1,6 @@
+{
+  "body": "{\"residentId\": \"test-resident-id3\",\"name\": \"Gildong Youn\",\"isPet\": false}",
+  "pathParameters": {
+    "aid": "0102"
+  }
+}

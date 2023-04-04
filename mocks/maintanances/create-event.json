@@ -1,0 +1,3 @@
+{
+  "body": "{\r\n    \"priority\": \"NORMAL\",\r\n    \"where\": \"Bathroom\",\r\n    \"description\": \"Curtain stick fell off\",\r\n    \"permissionToEnter\": true,\r\n    \"attachment\": \"stick.jpg\"\r\n  }"
+}

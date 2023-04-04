@@ -1,0 +1,81 @@
+Resources:
+  ResidentsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:custom.residentsTable}
+      AttributeDefinitions:
+        - AttributeName: residentId
+          AttributeType: S
+        - AttributeName: email
+          AttributeType: S
+      KeySchema:
+        - AttributeName: residentId
+          KeyType: HASH
+      # Set the capacity based on the stage
+      ProvisionedThroughput:
+        ReadCapacityUnits: ${self:custom.tableThroughput}
+        WriteCapacityUnits: ${self:custom.tableThroughput}
+      GlobalSecondaryIndexes:
+        - IndexName: emailIndex
+          KeySchema:
+            - AttributeName: email
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: ${self:custom.tableThroughput}
+            WriteCapacityUnits: ${self:custom.tableThroughput}
+  ApartsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:custom.apartsTable}
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+        - AttributeName: apartId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+        - AttributeName: apartId
+          KeyType: RANGE
+      # Set the capacity based on the stage
+      ProvisionedThroughput:
+        ReadCapacityUnits: ${self:custom.tableThroughput}
+        WriteCapacityUnits: ${self:custom.tableThroughput}
+  MaintanancesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:custom.maintanancesTable}
+      AttributeDefinitions:
+        - AttributeName: requestId
+          AttributeType: S
+        - AttributeName: requestedAt
+          AttributeType: S
+      KeySchema:
+        - AttributeName: requestId
+          KeyType: HASH
+        - AttributeName: requestedAt
+          KeyType: RANGE
+      # Set the capacity based on the stage
+      ProvisionedThroughput:
+        ReadCapacityUnits: ${self:custom.tableThroughput}
+        WriteCapacityUnits: ${self:custom.tableThroughput}
+  PaymentsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:custom.paymentsTable}
+      AttributeDefinitions:
+        - AttributeName: apartId
+          AttributeType: S
+        - AttributeName: transactedAt
+          AttributeType: S
+      KeySchema:
+        - AttributeName: apartId
+          KeyType: HASH
+        - AttributeName: transactedAt
+          KeyType: RANGE
+      # Set the capacity based on the stage
+      ProvisionedThroughput:
+        ReadCapacityUnits: ${self:custom.tableThroughput}
+        WriteCapacityUnits: ${self:custom.tableThroughput}

@@ -1,0 +1,6 @@
+{
+  "body": "{\r\n  \"isPrimary\": true,\r\n  \"isPet\": false,\r\n  \"lastName\": \"Youn\",\r\n  \"apartId\": \"0402\",\r\n  \"leaseTerm\": 12,\r\n  \"erContact\": {\r\n    \"firstName\": \"Hyeran\",\r\n    \"lastName\": \"Yoo\",\r\n    \"phone\": \"9131231234\"\r\n  },\r\n  \"leaseEndDate\": 1552579290361,\r\n  \"email\": \"sdymj84@gmail.com\",\r\n  \"regiNum\": \"Apt871628\",\r\n  \"firstName\": \"Minjun\",\r\n  \"moveInDate\": 1553270490363,\r\n  \"notifications\": {\r\n    \"isVoiceCallSub\": false,\r\n    \"isTextSub\": true,\r\n    \"isEmailSub\": true\r\n  },\r\n  \"leaseStartDate\": 1553270490363,\r\n  \"residentId\": \"d0d1cfaf-3b63-4449-8777-fbfc9083c208\",\r\n  \"vehicles\": [\r\n    {\r\n      \"model\": \"Soul\",\r\n      \"licensePlate\": \"263KJL\",\r\n      \"state\": \"KS\",\r\n      \"color\": \"White\",\r\n      \"year\": \"2011\",\r\n      \"make\": \"Kia\"\r\n    }\r\n  ],\r\n  \"phone\": \"9133536799\",\r\n  \"isLoading\": false\r\n}",
+  "pathParameters": {
+    "id": "d0d1cfaf-3b63-4449-8777-fbfc9083c208"
+  }
+}
